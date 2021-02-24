@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel = "stylesheet" href="formstyle.css">
+</head>
+<body>
+
+    <center><h1 id="DisplayMain">Application Form</h1></center>
+    <form action="appForm.html" method="post">
+      <center>  <table>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    <input type="text" name="ii">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Father Name
+                </td>
+                <td>
+                    <input type="text" name="ii">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Mother Name
+                </td>
+                <td>
+                    <input type="text" name="ii">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Email ID
+                </td>
+                <td>
+                    <input type="text" name="ii">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                   Phone No
+                </td>
+                <td>
+                    <input type="text" name="ii">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    AADHAR Number
+                </td>
+                <td>
+                    <input type="text" name="ii">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="button" onclick="InsertInto()">Submit</button>
+                </td>
+            </tr>
+
+        </table></center>
+    </form>
+
+    <p id="Display1"></p> 
+    <script>
+        var k = "The Input values are --> :"; 
+function InsertInto() { 
+    var input = document.getElementsByName('ii'); 
+
+    for (var i = 0; i < input.length; i++) { 
+        var a = input[i]; 
+        k = k + a.value + ", "; 
+    } 
+
+    document.getElementById("Display1").innerHTML = k; 
+    document.getElementById("DisplayMain").innerHTML = "Output"; 
+} 
+    </script>
+</body>
+</html>
